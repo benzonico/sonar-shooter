@@ -20,7 +20,8 @@
 package org.sonarsource.shooter;
 
 import org.sonar.api.Plugin;
-  import org.sonarsource.shooter.web.ShooterPluginPageDefinition;
+import org.sonarsource.shooter.web.CodeToPngService;
+import org.sonarsource.shooter.web.ShooterPluginPageDefinition;
 
 /**
  * This class is the entry point for all extensions. It is referenced in pom.xml.
@@ -29,6 +30,6 @@ public class ShooterPlugin implements Plugin {
 
   @Override
   public void define(Context context) {
-    context.addExtension(ShooterPluginPageDefinition.class);
+    context.addExtension(ShooterPluginPageDefinition.class).addExtension(CodeToPngService.class);
   }
 }
