@@ -47,7 +47,7 @@ public class Converter {
       html = "<html><head>"+css+"</head>"+html+"</html>";
       Html2Image generator = new Html2Image();
       generator.getParser().loadHtml(html);
-      generator.getImageRenderer().setImageType("png").setAutoHeight(false).setHeight(length*20).setWidth(600).saveImage(outputStream, true);
+      generator.getImageRenderer().setImageType("png").setAutoHeight(false).setHeight(length*20).setWidth(800).saveImage(outputStream, true);
     } catch (Exception e) {
       e.printStackTrace();
     }
